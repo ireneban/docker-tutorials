@@ -9,6 +9,10 @@ Docker란 리눅스 컨테이너를 기반으로 하여 특정한 서비스를 �
 
 `$ docker`
 
+### Authentication
+
+`$ docker login`
+
 ## CONTAINERS
 
 ### See running containers
@@ -77,8 +81,12 @@ COPY . .
 
 ### 3. Build image based on Dockerfile that you just wrote
 
-`docker image build -t halfundecided/nginx-website .`
+`$ docker image build -t halfundecided/nginx-website .`
 
-### 4. build and run a container from this image
+### 4. Build and run a container from this image
 
-`docker container run -d -p 8082:80 halfundecided/nginx-website`
+`$ docker container run -d -p 8082:80 halfundecided/nginx-website`
+
+### 5. Push this image to my Dockerhub
+
+`$ docker push halfundecided/nginx-website`
